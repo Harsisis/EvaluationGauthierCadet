@@ -12,7 +12,7 @@ namespace EvaluationGauthierCadet {
             var lines = File.ReadAllLines(filePath);
             int totalWordsAmount = 0;
             Parallel.ForEach(lines, (line) => {
-                int wordsInThisLine = line.Split(new char[] { ' ', '\n' }).Length;
+                int wordsInThisLine = line.Split(new char[] { ' ', ',', '.', ';', ':', '-', '\r', '\n', '\t' }).Length;
                 totalWordsAmount += wordsInThisLine;
             });
             Console.WriteLine("this file has {0} words.", totalWordsAmount);
@@ -23,7 +23,7 @@ namespace EvaluationGauthierCadet {
             var lines = File.ReadAllLines(filePath);
             int occurrenceCounter = 0;
             Parallel.ForEach(lines, (line) => {
-                foreach (string word in line.Split(new char[] { ' ', '\n' })) {
+                foreach (string word in line.Split(new char[] { ' ', ',', '.', ';', ':', '-', '\r', '\n', '\t' })) {
                     if (word == wordToFind) {
                         occurrenceCounter++;
                     }

@@ -1,4 +1,7 @@
 # EvaluationGauthierCadet
+
+Je me suis fait avoir avec la parallelisation dans la lecture des fichiers, je n'ai pas le même nombre de mots à chaque execution.
+
 ## Evaluation
 - L'objectif est de réaliser quelque chose comme nous avons vu dans le dernier exercice (plus complet)
 
